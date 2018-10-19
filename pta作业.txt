@@ -1,0 +1,78 @@
+//计算正五边形的面积和周长
+import java.util.Scanner;
+import java.lang.Math;
+public class Main{
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		double side  = in.nextDouble();
+		wubianxing wu = new wubianxing(side);
+		System.out.printf("%.4f\n",wu.getArea());
+		// if(wu.getLength()%1==0)
+		// {
+			// System.out.println((int)wu.getLength());
+		// }
+		// else
+			// System.out.println(wu.getLength());
+		 System.out.println(new DecimalFormat("#.####").format(wu.getLength()));
+	}
+	
+}
+class wubianxing{
+   double side;
+  public wubianxing(double side)
+	{
+		this.side  = side;
+	}
+	public double getLength()
+	{	double length;
+
+		length = 5*side;
+		return length;
+
+
+	}
+	public double getArea()
+	{
+		double S;
+		S = (5*side*side)/(4*Math.tan(Math.PI/5));
+		return S;
+	}
+}
+
+/**
+*空心金字塔
+*/
+import java.lang.Math;
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		char a = in.next().charAt(0);
+		int b = a-65;
+		// System.out.println(b);
+		for(int i=1;i<=b+1;i++)
+		{	
+			int count=0;
+			for(int j=0;j<40-i;j++)
+			{
+				
+					System.out.print(" ");
+			}
+			int w=i-1+65;
+			System.out.print((char)w);
+			for(int k=0;k<2*(i-1)-1;k++)
+			{
+				if(i!=b+1)
+				System.out.print(" ");
+				else
+					System.out.print((char)(b+65));
+			}
+			if(w!=65)
+			System.out.print((char)w);
+			System.out.println();
+		}
+	
+
+	}
+}
