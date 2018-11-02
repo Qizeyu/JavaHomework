@@ -6,4 +6,7 @@ BeanMachine.java是模拟一个豆子游戏，输入豆子的个数和层数，�
 ScoketTest.java是Socket类的一个示例，返回一个当前的一个时间
 
 thread为多个客户端提供服务
+Fan是一个风扇类
+Account是一个银行账户类
+QuadraticEquation是一个计算二元一次方程的类
 
